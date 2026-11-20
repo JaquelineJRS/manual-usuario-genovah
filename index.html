@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Manual do usuário do Genovah: orientações para utilizar as principais áreas do sistema.">
+<meta name="theme-color" content="#8062a6">
+<title>Manual do Usuário — Genovah</title>
+<style>
+:root{--purple:#8062a6;--purple-dark:#49365e;--gold:#daba7b;--ink:#302a38;--muted:#635d69;--paper:#fff;--wash:#f7f4fa;--line:#e6deed;--shadow:0 10px 28px rgba(53,35,71,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.68 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#624580;text-underline-offset:3px}a:hover{color:#38264f}
+.skip-link{position:absolute;left:-9999px;top:0;background:#fff;padding:.75rem;z-index:20}.skip-link:focus{left:1rem;top:1rem}
+.topbar{background:linear-gradient(120deg,var(--purple-dark),var(--purple));color:#fff;border-bottom:4px solid var(--gold)}
+.topbar-inner{max-width:1160px;margin:auto;padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:750;letter-spacing:.03em;font-size:1.15rem}.topbar small{opacity:.9}
+.page{max-width:1160px;margin:2rem auto;padding:0 1.25rem 4rem}
+article{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:clamp(1.2rem,3vw,3rem)}
+h1,h2,h3,h4{line-height:1.25;color:var(--purple-dark);scroll-margin-top:1rem}
+h1{font-size:clamp(2rem,5vw,3rem);margin:.2rem 0 1rem}h2{font-size:1.7rem;margin:2.6rem 0 1rem;padding-top:.7rem;border-top:1px solid var(--line)}h3{font-size:1.28rem;margin:2rem 0 .8rem}h4{font-size:1.08rem}
+p{margin:.75rem 0}ul,ol{padding-left:1.5rem;margin:.7rem 0 1.2rem}li{padding-left:.2rem;margin:.32rem 0}hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+blockquote{margin:1.25rem 0;padding:1rem 1.25rem;background:#fbf8ff;border-left:4px solid var(--gold);border-radius:0 10px 10px 0;color:var(--muted)}
+.note{padding:.8rem 1rem;border-radius:10px;background:#fff8e8;border-left:4px solid var(--gold);font-size:.95rem}.note-completar{background:#fff8e8}.note-validar{background:#fff2f2;border-left-color:#ba6870}.note-print{background:#f6f1fb;border-left-color:var(--purple)}
+strong{color:#43304f}code{background:#f2edf5;border-radius:4px;padding:.1rem .3rem;font-size:.9em}
+.table-wrap{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:10px}table{border-collapse:collapse;width:100%;min-width:540px;background:#fff}th,td{text-align:left;padding:.72rem .85rem;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f0eaf5;color:var(--purple-dark);font-weight:700}tbody tr:nth-child(even){background:#fbf9fc}tbody tr:last-child td{border-bottom:0}
+.manual-figure{margin:1.35rem 0 1.8rem;text-align:center}.manual-figure img{display:block;max-width:100%;height:auto;margin:auto;border:1px solid var(--line);border-radius:10px;box-shadow:0 4px 14px rgba(48,31,65,.08)}figcaption{margin-top:.45rem;color:var(--muted);font-size:.9rem}
+footer{max-width:1160px;margin:-2rem auto 2rem;padding:0 1.25rem;color:var(--muted);font-size:.9rem}
+@media(max-width:700px){.topbar-inner{align-items:flex-start;flex-direction:column;gap:.2rem}.page{margin:1rem auto;padding:0 .65rem 2rem}article{padding:1rem;border-radius:12px}h2{font-size:1.45rem;margin-top:2rem}h3{font-size:1.18rem}body{font-size:15px}.manual-figure{margin:1rem 0 1.3rem}}
+@media print{body{background:#fff}.topbar{background:#fff;color:var(--ink);border-bottom:2px solid var(--gold)}.page{max-width:none;margin:0;padding:0}article{border:0;box-shadow:none;padding:0}.manual-figure img{box-shadow:none;break-inside:avoid}a{color:inherit;text-decoration:none}h2,h3{break-after:avoid}.table-wrap{overflow:visible}table{min-width:0}footer{margin:1rem 0}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="topbar"><div class="topbar-inner"><span class="brand">Genovah</span><small>Manual do usuário · versão 0.2 · rascunho para revisão</small></div></header>
+<div class="page"><main id="conteudo"><article>
+<p><strong>Versão do manual:</strong> 0.2 — rascunho para revisão <strong>Baseado em:</strong> textos funcionais e telas identificadas na aplicação <strong>Público:</strong> profissionais de saúde, gestores e pessoas responsáveis pelos cadastros do sistema</p>
+<blockquote><p>Este manual reúne as orientações de uso identificadas no material de referência. Os trechos marcados como <strong>[COMPLETAR]</strong> precisam ser confirmados ou preenchidos antes da publicação. Os espaços <strong>[INSERIR PRINT]</strong> estão reservados para imagens das telas.</p></blockquote>
+<hr>
+<h2 id="sumário">Sumário</h2>
+<ol>
+<li><a href="#1-sobre-este-manual">Sobre este manual</a></li>
+<li><a href="#2-conhecendo-o-genovah">Conhecendo o Genovah</a></li>
+<li><a href="#3-acesso-e-tela-inicial">Acesso e tela inicial</a></li>
+<li><a href="#4-pacientes">Pacientes</a></li>
+<li><a href="#5-agendas-de-atendimento">Agendas de atendimento</a></li>
+<li><a href="#6-acompanhamento-pré-natal">Acompanhamento pré-natal</a></li>
+<li><a href="#7-alertas">Alertas</a></li>
+<li><a href="#8-medicamentos-e-posologias">Medicamentos e posologias</a></li>
+<li><a href="#9-prescrições-padrão">Prescrições padrão</a></li>
+<li><a href="#10-atividades-exames-e-encaminhamentos">Atividades, exames e encaminhamentos</a></li>
+<li><a href="#11-administração-cadastros-e-configurações">Administração, cadastros e configurações</a></li>
+<li><a href="#12-dúvidas-e-pontos-a-completar">Dúvidas e pontos a completar</a></li>
+</ol>
+<hr>
+<h2 id="1-sobre-este-manual">1. Sobre este manual</h2>
+<p>Este documento explica, em linguagem de uso, para que servem as principais áreas do Genovah e como realizar as tarefas descritas no material de referência. As orientações clínicas e decisões sobre o cuidado permanecem sob responsabilidade do profissional de saúde.</p>
+<p>O conteúdo de infraestrutura, programação, estrutura interna de dados e funcionalidades ainda descritas como futuras foi deixado de fora. Quando o material não informa os passos completos de uma tela, o manual sinaliza a lacuna para revisão em vez de presumir como ela funciona.</p>
+<h3 id="como-interpretar-os-marcadores">Como interpretar os marcadores</h3>
+<ul>
+<li><strong>[INSERIR PRINT — ...]</strong>: espaço para adicionar uma captura da tela indicada.</li>
+<li><strong>[COMPLETAR — ...]</strong>: informação que precisa ser fornecida ou validada pela equipe responsável.</li>
+<li><strong>[VALIDAR DISPONIBILIDADE]</strong>: a referência descreve a ideia ou regra, mas não confirma claramente o uso atual na interface.</li>
+</ul>
+<h2 id="2-conhecendo-o-genovah">2. Conhecendo o Genovah</h2>
+<p>O Genovah reúne informações de pacientes, atendimentos, profissionais e acompanhamentos em um só sistema. O foco descrito no material é o acompanhamento clínico, especialmente o pré-natal.</p>
+<p>As áreas mencionadas são:</p>
+<ul>
+<li><strong>Pacientes:</strong> cadastro e consulta do perfil e do histórico de atendimentos.</li>
+<li><strong>Atividades:</strong> registro de atividades assistenciais.</li>
+<li><strong>Agendas de Atendimento:</strong> organização dos atendimentos por profissional e período.</li>
+<li><strong>Acompanhamentos — Pré-Natal:</strong> abertura e acompanhamento das consultas da gestante, com registros clínicos, checklist, exames, prescrições e histórico.</li>
+<li><strong>Administração e Cadastros:</strong> gestão de usuários e informações de apoio, conforme o perfil de acesso.</li>
+<li><strong>Configurações:</strong> parâmetros gerais do sistema, para usuários autorizados.</li>
+</ul>
+<p>As opções visíveis podem variar conforme o perfil de acesso de cada usuário.</p>
+<h2 id="3-acesso-e-tela-inicial">3. Acesso e tela inicial</h2>
+<h3 id="para-que-serve">Para que serve</h3>
+<p>A tela inicial reúne indicadores gerais da operação. O material menciona a visualização de pacientes em atendimento e profissionais envolvidos. O sistema também apresenta a área de alertas quando há itens pendentes.</p>
+<h3 id="como-usar">Como usar</h3>
+<ol>
+<li>Acesse o Genovah pelo endereço fornecido pela sua instituição.</li>
+<li>Entre com sua conta de usuário.</li>
+<li>Na tela inicial, consulte os indicadores disponíveis e use o menu para abrir a área desejada.</li>
+<li>Se houver alertas, abra o sino de notificações para revisar os itens pendentes.</li>
+</ol>
+<figure class="manual-figure"><img src="imagens/tela-acesso.png" alt="Tela de acesso ao Genovah" loading="lazy"></figure>
+<p><em>Tela de acesso ao Genovah.</em></p>
+<figure class="manual-figure"><img src="imagens/tela-inicial.png" alt="Tela inicial com menu e indicadores" loading="lazy"></figure>
+<p><em>Tela inicial, com menu e indicadores.</em></p>
+<p class="note note-completar"><strong>[COMPLETAR — endereço oficial de acesso, instruções de primeiro acesso, recuperação de senha e identificação dos menus da tela inicial.]</strong></p>
+<h2 id="4-pacientes">4. Pacientes</h2>
+<h3 id="para-que-serve">Para que serve</h3>
+<p>A área de pacientes centraliza os dados cadastrais e o histórico de atendimentos da pessoa acompanhada. O material também indica que a classificação de risco pode ser consultada no contexto do acompanhamento pré-natal.</p>
+<h3 id="como-usar">Como usar</h3>
+<ol>
+<li>Abra <strong>Pacientes</strong> para consultar a lista.</li>
+<li>Para incluir uma paciente, abra a opção de cadastro e preencha os dados solicitados.</li>
+<li>O formulário inclui dados como nome, nome social, CPF, data de nascimento, nome da mãe, número do SUS, telefone, endereço, escolaridade e cor autodeclarada. Preencha também os demais campos apresentados que forem aplicáveis.</li>
+<li>Salve o cadastro. Para consultar ou atualizar uma pessoa já cadastrada, selecione-a na lista e abra seu cadastro.</li>
+</ol>
+<p>O formulário também apresenta informações como sexo, tipo sanguíneo, deficiência e orientação sexual. Preencha esses dados de acordo com as orientações institucionais e com as informações fornecidas pela paciente.</p>
+<figure class="manual-figure"><img src="imagens/lista-pacientes.png" alt="Lista de pacientes" loading="lazy"></figure>
+<p><em>Lista de pacientes.</em></p>
+<figure class="manual-figure"><img src="imagens/cadastro-paciente.png" alt="Cadastro ou perfil da paciente" loading="lazy"></figure>
+<p><em>Cadastro ou perfil da paciente.</em></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar os campos obrigatórios, como funciona a busca na lista e como abrir o histórico clínico a partir do cadastro.]</strong></p>
+<h2 id="5-agendas-de-atendimento">5. Agendas de atendimento</h2>
+<h3 id="para-que-serve">Para que serve</h3>
+<p>A agenda organiza os atendimentos por profissional e período. Os agendamentos também ajudam a acompanhar consultas futuras e identificar situações que precisam de atenção.</p>
+<h3 id="como-usar">Como usar</h3>
+<ol>
+<li>Abra <strong>Agendas de Atendimento</strong>.</li>
+<li>Para criar um horário, selecione a opção de novo agendamento.</li>
+<li>Informe paciente, profissional de saúde, especialidade, data e horário de início e fim. Acrescente observações, se necessário.</li>
+<li>Salve o agendamento.</li>
+<li>Para consultar um horário, localize-o na agenda e abra o registro correspondente.</li>
+</ol>
+<figure class="manual-figure"><img src="imagens/agenda-atendimento.png" alt="Agenda de atendimentos" loading="lazy"></figure>
+<p><em>Agenda de atendimentos.</em></p>
+<figure class="manual-figure"><img src="imagens/formulario-agendamento.png" alt="Formulário de agendamento" loading="lazy"></figure>
+<p><em>Formulário de agendamento, com paciente e dados do atendimento.</em></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar os nomes dos botões, como alterar ou cancelar um agendamento e como atualizar a situação após o atendimento.]</strong></p>
+<h2 id="6-acompanhamento-pré-natal">6. Acompanhamento pré-natal</h2>
+<h3 id="para-que-serve">Para que serve</h3>
+<p>O acompanhamento pré-natal reúne os dados iniciais da gestação e os registros das consultas seguintes. Cada atendimento pode atualizar o histórico da gestante e incluir informações clínicas, checklist, exames, prescrições e encaminhamentos.</p>
+<h3 id="6-1-abrir-o-pré-natal">6.1 Abrir o pré-natal</h3>
+<p>Na abertura são registrados dados da gestação, incluindo a data da última menstruação e informações do ultrassom, quando aplicável. A tela também contempla peso, altura, pressão arterial, histórico de gestações e partos e observações. Esses dados apoiam o cálculo da idade gestacional, da data provável do parto e da classificação de risco.</p>
+<ol>
+<li>Acesse o cadastro da paciente.</li>
+<li>Inicie um novo pré-natal.</li>
+<li>Informe a data da última menstruação e, quando disponível, os dados do ultrassom.</li>
+<li>Preencha peso, altura, pressão arterial e informações sobre gestações e partos anteriores.</li>
+<li>Confira os dados calculados e a classificação apresentada.</li>
+<li>Salve a abertura e siga as opções da tela para iniciar o checklist.</li>
+</ol>
+<figure class="manual-figure"><img src="imagens/abrir-pre-natal-anonimizado.png" alt="Lista de pacientes com dados mascarados e botão para abrir o prontuário pré-natal destacado" loading="lazy"></figure>
+<p><em>Acesso à abertura do pré-natal a partir da lista.</em></p>
+<figure class="manual-figure"><img src="imagens/abertura-pre-natal.png" alt="Dados de abertura do pré-natal" loading="lazy"></figure>
+<p><em>Dados da gestação e da consulta inicial.</em></p>
+<figure class="manual-figure"><img src="imagens/historico-gestacional.png" alt="Histórico gestacional informado na abertura" loading="lazy"></figure>
+<p><em>Informações do histórico gestacional.</em></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar quais dados são obrigatórios, como registrar ausência de uma data conhecida e qual botão salva a abertura.]</strong></p>
+<h3 id="6-2-registrar-uma-consulta">6.2 Registrar uma consulta</h3>
+<p>Na consulta, o profissional registra as informações correspondentes ao atendimento, como peso, pressão arterial e outros dados clínicos disponíveis na tela. O acompanhamento também pode incluir checklist, solicitações de exames, prescrições e encaminhamentos.</p>
+<ol>
+<li>Abra o pré-natal da paciente e selecione <strong>Novo Acompanhamento</strong>.</li>
+<li>Informe o tipo de acompanhamento e os dados da consulta, como peso, altura, pressão arterial, altura uterina e batimento cardiofetal, conforme aplicável.</li>
+<li>Confira a idade gestacional e as análises apresentadas pelo sistema.</li>
+<li>Registre observações e preencha o checklist aplicável.</li>
+<li>Revise a classificação de risco apresentada pelo sistema.</li>
+<li>Selecione as ações necessárias, como nova prescrição, exame ou encaminhamento, conforme os protocolos da instituição.</li>
+<li>Salve o acompanhamento ou finalize a consulta, conforme a etapa do atendimento.</li>
+</ol>
+<p>As capturas abaixo mostram as etapas do checklist inicial do pré-natal.</p>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-01.png" alt="Checklist inicial do pré-natal — parte 1" loading="lazy"></figure>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-02.png" alt="Checklist inicial do pré-natal — parte 2" loading="lazy"></figure>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-03.png" alt="Checklist inicial do pré-natal — parte 3" loading="lazy"></figure>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-04.png" alt="Checklist inicial do pré-natal — parte 4" loading="lazy"></figure>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-05.png" alt="Checklist inicial do pré-natal — parte 5" loading="lazy"></figure>
+<figure class="manual-figure"><img src="imagens/checklist-pre-natal-06.png" alt="Checklist inicial do pré-natal — parte 6" loading="lazy"></figure>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar quais campos são obrigatórios, a diferença entre salvar e finalizar, e se uma consulta finalizada pode ser corrigida ou reaberta.]</strong></p>
+<h3 id="6-3-entender-a-classificação-de-risco">6.3 Entender a classificação de risco</h3>
+<p>O sistema apresenta a classificação em três níveis:</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Nível</th><th scope="col">Cor indicada</th><th scope="col">Significado geral</th></tr></thead><tbody><tr><td>Baixo</td><td>Verde</td><td>Não foram identificados fatores de risco na avaliação registrada.</td></tr><tr><td>Médio</td><td>Amarelo</td><td>Há fatores que requerem atenção.</td></tr><tr><td>Alto</td><td>Vermelho</td><td>A situação requer acompanhamento intensivo.</td></tr></tbody></table></div>
+<p>A classificação considera os dados registrados. O material cita antecedentes e respostas do checklist, histórico obstétrico, índice de massa corporal (IMC) calculado a partir de peso e altura e pressão arterial. A origem dos fatores pode aparecer junto ao nível de risco. O resultado deve ser interpretado pelo profissional dentro do contexto clínico.</p>
+<figure class="manual-figure"><img src="imagens/classificacao-risco-inicial.png" alt="Resultado da classificação de risco ao final da primeira consulta" loading="lazy"></figure>
+<p><em>Resultado da classificação de risco após a primeira consulta.</em></p>
+<h3 id="6-4-comparar-com-a-consulta-anterior">6.4 Comparar com a consulta anterior</h3>
+<p>O material descreve uma visualização que compara a classificação da consulta atual com a anterior, incluindo indicação de aumento, redução ou manutenção do nível. Caso não exista consulta anterior, os dados da abertura do pré-natal podem servir como referência.</p>
+<p class="note note-validar"><strong>[VALIDAR DISPONIBILIDADE — confirmar se os cartões comparativos estão ativos na versão publicada e inserir print da tela.]</strong></p>
+<h3 id="6-5-consultar-o-histórico">6.5 Consultar o histórico</h3>
+<p>O histórico reúne consultas anteriores e pode apresentar sinais vitais e classificações registradas. Use essa área para consultar a evolução do acompanhamento.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — histórico de consultas]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — caminho exato para abrir o histórico e quais informações ficam disponíveis.]</strong></p>
+<h3 id="6-6-encerrar-ou-registrar-o-desfecho">6.6 Encerrar ou registrar o desfecho</h3>
+<p>O material menciona o registro de puerpério ou interrupção da gestação como parte do acompanhamento.</p>
+<p class="note note-completar"><strong>[COMPLETAR — quando e por quem o pré-natal deve ser encerrado e como registrar o desfecho.]</strong></p>
+<h2 id="7-alertas">7. Alertas</h2>
+<h3 id="para-que-servem">Para que servem</h3>
+<p>Os alertas chamam a atenção para situações pendentes relacionadas ao acompanhamento. O material descreve alertas de falta em consulta, ausência de próxima consulta e exame sem resultado.</p>
+<h3 id="como-consultar-e-tratar-um-alerta">Como consultar e tratar um alerta</h3>
+<ol>
+<li>Se o sino de notificações estiver visível, selecione-o para abrir a lista.</li>
+<li>Leia a mensagem e identifique a paciente e a pendência indicada.</li>
+<li>Selecione <strong>Lido</strong> quando tiver revisado o alerta.</li>
+<li>Se precisar voltar a ele mais tarde, use <strong>Adiar</strong> e informe a data e o horário para que volte a aparecer.</li>
+</ol>
+<p>Os alertas adiados deixam de aparecer até o horário escolhido. A lista é atualizada automaticamente; o material informa que ela também é atualizada periodicamente enquanto a página está aberta.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — sino e lista de alertas]</strong></p>
+<p class="note note-print"><strong>[INSERIR PRINT — opções Lido e Adiar]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar se é possível marcar todos como lidos, quais perfis recebem os alertas e como abrir diretamente o registro relacionado.]</strong></p>
+<h2 id="8-medicamentos-e-posologias">8. Medicamentos e posologias</h2>
+<h3 id="para-que-serve">Para que serve</h3>
+<p>O cadastro de medicamentos mantém os medicamentos disponíveis para uso nas prescrições. Cada medicamento pode ter uma ou mais posologias associadas. Uma posologia descreve como o medicamento será utilizado, por exemplo, dose, unidade, frequência e duração.</p>
+<p>Esta área deve ser utilizada por pessoas autorizadas. A inclusão de um medicamento ou de uma posologia não substitui a avaliação e a decisão clínica do profissional responsável.</p>
+<h3 id="8-1-cadastrar-um-medicamento">8.1 Cadastrar um medicamento</h3>
+<ol>
+<li>Acesse <strong>Cadastro de Medicamentos</strong>.</li>
+<li>Selecione <strong>Criar</strong>.</li>
+<li>Informe o nome do medicamento ou princípio ativo, a concentração e a forma farmacêutica.</li>
+<li>Salve o cadastro.</li>
+<li>Após salvar, abra o medicamento para incluir suas posologias.</li>
+</ol>
+<p class="note note-print"><strong>[INSERIR PRINT — cadastro de medicamento]</strong></p>
+<h3 id="8-2-cadastrar-uma-posologia">8.2 Cadastrar uma posologia</h3>
+<ol>
+<li>Abra o medicamento desejado.</li>
+<li>Na seção de posologias, selecione <strong>Adicionar Linha</strong> ou <strong>+ Posologia</strong>, conforme o botão exibido.</li>
+<li>Informe a dose e a unidade de medida.</li>
+<li>Informe a frequência ou o intervalo entre as doses e a unidade de tempo.</li>
+<li>Quando houver prazo definido, informe a duração do tratamento e sua unidade de tempo. Para uso contínuo, indique essa condição se a tela oferecer o campo.</li>
+<li>Preencha uma observação, se necessário.</li>
+<li>Deixe a descrição em branco quando o sistema gerar o texto automaticamente.</li>
+<li>Salve a linha.</li>
+</ol>
+<p>Exemplos de descrição: “Tomar 1 comprimido a cada 8 horas” ou “Tomar 1 comprimido ao dia por 7 dias”. Confira o texto exibido antes de utilizar a posologia em uma prescrição.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — campos de posologia e descrição gerada]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar os nomes atuais dos campos e os botões para salvar a linha.]</strong></p>
+<h3 id="8-3-ativar-ou-inativar">8.3 Ativar ou inativar</h3>
+<p>O material informa que medicamentos ou posologias inativados deixam de aparecer nas opções de novas prescrições. Os registros anteriores permanecem no histórico.</p>
+<p class="note note-completar"><strong>[COMPLETAR — indicar onde fica a opção de ativar/inativar e quais perfis podem utilizá-la.]</strong></p>
+<h2 id="9-prescrições-padrão">9. Prescrições padrão</h2>
+<h3 id="para-que-servem">Para que servem</h3>
+<p>Uma prescrição padrão é um modelo reutilizável que reúne um ou mais medicamentos e as respectivas posologias. Ela ajuda a padronizar prescrições frequentes. A posologia deve estar cadastrada no medicamento antes de ser selecionada no modelo.</p>
+<h3 id="9-1-criar-uma-prescrição-padrão">9.1 Criar uma prescrição padrão</h3>
+<ol>
+<li>Acesse a lista de <strong>Prescrições Padrão</strong>.</li>
+<li>Selecione <strong>Criar</strong>.</li>
+<li>Informe o nome da prescrição.</li>
+<li>Salve o registro.</li>
+<li>Volte à lista e abra a prescrição criada.</li>
+<li>Adicione uma linha para cada medicamento.</li>
+<li>Pesquise e selecione o medicamento.</li>
+<li>Selecione uma posologia disponível para aquele medicamento.</li>
+<li>Salve a linha e selecione <strong>Aplicar Alterações</strong> para concluir.</li>
+</ol>
+<p class="note note-print"><strong>[INSERIR PRINT — lista e criação de prescrição padrão]</strong></p>
+<p class="note note-print"><strong>[INSERIR PRINT — seleção de medicamento e posologia]</strong></p>
+<h3 id="9-2-alterar-uma-prescrição-padrão">9.2 Alterar uma prescrição padrão</h3>
+<p>Abra a prescrição desejada e ajuste os medicamentos ou posologias disponíveis. Para criar ou alterar uma posologia, acesse o cadastro do medicamento correspondente.</p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar os passos para alterar o nome e editar uma linha já salva.]</strong></p>
+<h3 id="9-3-remover-um-medicamento-do-modelo">9.3 Remover um medicamento do modelo</h3>
+<ol>
+<li>Localize o medicamento na lista da prescrição.</li>
+<li>Abra o menu de ações da linha, exibido antes do nome do medicamento.</li>
+<li>Selecione <strong>Excluir</strong> e confirme ou aplique as alterações conforme a tela.</li>
+</ol>
+<p class="note note-print"><strong>[INSERIR PRINT — menu de ações da linha e opção Excluir]</strong></p>
+<h3 id="9-4-inativar-uma-prescrição-padrão">9.4 Inativar uma prescrição padrão</h3>
+<p>O material informa que uma prescrição inativada deixa de aparecer para seleção em atendimentos, mas permanece registrada no histórico.</p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar onde fica a opção para inativar e como reativar, se permitido.]</strong></p>
+<h2 id="10-atividades-exames-e-encaminhamentos">10. Atividades, exames e encaminhamentos</h2>
+<h3 id="atividades">Atividades</h3>
+<p>A área de atividades é descrita como local para registrar atividades assistenciais realizadas pelos profissionais. A tela de consulta de atividades apresenta filtros por paciente e profissional.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — atividades]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — exemplos de atividades disponíveis e como registrar, consultar ou corrigir uma atividade.]</strong></p>
+<h3 id="exames">Exames</h3>
+<p>O acompanhamento pode conter solicitações e resultados de exames. O material também descreve alertas para exames solicitados sem resultado, mas não detalha os passos atuais para solicitar um exame, registrar a realização ou lançar o resultado.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — exames no acompanhamento]</strong></p>
+<p>Para gerar uma solicitação, abra <strong>Solicitação de exames</strong>, selecione a paciente, escolha os exames desejados e use <strong>Gerar</strong>. A tela também oferece a opção <strong>Voltar</strong>.</p>
+<p class="note note-completar"><strong>[COMPLETAR — como registrar data de realização e resultado, cancelar uma solicitação e consultar exames pendentes.]</strong></p>
+<h3 id="encaminhamentos">Encaminhamentos</h3>
+<p>Durante o atendimento podem ser registrados encaminhamentos, incluindo odontologia e nutrição. O material também cita vacinação. Os encaminhamentos ficam associados ao histórico da consulta.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — encaminhamentos disponíveis]</strong></p>
+<p>Para registrar um encaminhamento, abra <strong>Encaminhamento</strong>, confirme a paciente, selecione o destino em <strong>Encaminhar para</strong>, informe o motivo ou descrição e use <strong>Salvar/Imprimir</strong>.</p>
+<p class="note note-validar"><strong>[VALIDAR DISPONIBILIDADE — confirmar quais destinos estão ativos e se o encaminhamento deve ser impresso ou entregue de outra forma.]</strong></p>
+<h3 id="vacinas">Vacinas</h3>
+<p>O cadastro de vacina permite registrar qual vacina foi relacionada ao acompanhamento, a data, o lote, a situação atual, o que aconteceu e uma observação.</p>
+<ol>
+<li>Abra a opção de registro de vacina no acompanhamento da paciente.</li>
+<li>Informe vacina, data e lote, quando aplicável.</li>
+<li>Selecione a situação atual e indique o que aconteceu.</li>
+<li>Registre uma observação, se necessário, e salve.</li>
+</ol>
+<p class="note note-print"><strong>[INSERIR PRINT — registro de vacina]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — confirmar como acessar a tela e esclarecer o uso da opção Desfazer.]</strong></p>
+<h2 id="11-administração-cadastros-e-configurações">11. Administração, cadastros e configurações</h2>
+<h3 id="para-que-servem">Para que servem</h3>
+<p>Estas áreas são destinadas a usuários com acesso administrativo. O material cita gestão de usuários e perfis, profissionais de saúde, especialidades, tipos de acompanhamento e parâmetros gerais do sistema.</p>
+<p>A área de relatórios inclui visões relacionadas a consultas em atraso e pacientes sem próxima consulta, além de relatórios de pré-natal.</p>
+<h3 id="como-usar">Como usar</h3>
+<p>O material não apresenta passos de tela para criar usuários, atribuir perfis, manter cadastros de apoio ou alterar configurações. Essas instruções devem ser acrescentadas por um usuário administrador responsável.</p>
+<p class="note note-print"><strong>[INSERIR PRINT — área de administração]</strong></p>
+<p class="note note-completar"><strong>[COMPLETAR — incluir os procedimentos aprovados para usuários, perfis, profissionais, especialidades, tipos de acompanhamento e configurações; explicar os filtros e a impressão dos relatórios.]</strong></p>
+<h2 id="12-dúvidas-e-pontos-a-completar">12. Dúvidas e pontos a completar</h2>
+<p>Antes de publicar o manual, revisar e preencher os itens abaixo:</p>
+<ul>
+<li>Endereço de acesso e orientações para primeiro acesso e recuperação de senha.</li>
+<li>Prints atualizados da tela inicial, pacientes, agenda e acompanhamento pré-natal.</li>
+<li>Passos completos de cadastro, busca e atualização de pacientes.</li>
+<li>Passos de criação, alteração, cancelamento e consulta de agendamentos.</li>
+<li>Campos obrigatórios e regras para salvar, finalizar, reabrir ou corrigir uma consulta.</li>
+<li>Confirmação de que a comparação entre riscos de consultas está disponível na versão atual.</li>
+<li>Passos para registrar exames, resultados e encaminhamentos.</li>
+<li>Passos para ativar ou inativar medicamentos, posologias e prescrições padrão.</li>
+<li>Procedimentos administrativos para usuários, perfis e cadastros de apoio.</li>
+<li>Confirmação de quais recursos descritos no material estão liberados para todos os perfis.</li>
+</ul>
+<hr>
+<p><strong>Fim do manual — rascunho para validação funcional e inclusão das capturas de tela.</strong></p>
+</article></main></div>
+<footer>Manual baseado nas orientações e telas fornecidas pela equipe Genovah. Revise os itens marcados antes da publicação.</footer>
+</body>
+</html>
